@@ -1,4 +1,0 @@
-﻿Követelmény specifikáció
-
--Környezet ismertetése-
-A Unity-ben fejlesztett játékok egyre nagyobb népszerűségre tesz szert. Az egyre szélesedő kör annak köszönhető, hogy nem csak Windows-os platformon érhető el, hanem klönböző operációs rendszerekkel ellátott gépeken, telefonokon és más okoskészülékeken és nem csak fizetős verziókkal találkozhatunk. Emellett a játékélmény a kisebb gépigényű játékok esetén is élményt tudnak nyújtani, mint  a Super Hot vagy a Broforce. Valamint a már a magasabb követelményeket követelő  Inside vagy az Ori In The Blind Forest. Utóbbit a tavalyi év játékának válaszottát, ami nem lehet véletlen. Ha játékokra gondolunk akkor a Steam játékközpontból sok unity alatt fejlesztett szoftvert lehet elérni. Ezért sem lehet figyelmen kívül hagyni a játékfejlesztés ezen területét sem.

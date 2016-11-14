@@ -1,0 +1,11 @@
+﻿#Követelményspecifikáció
+##I. Jelenlegi helyzet leírása.
+Jelenleg ma a szoftverpiacon nagyon nagy a verseny és nehéz olyan szoftvert írni amivel egy cég meglepetésszerűen be tud robbanni. Talán még nehezebb feladat bent maradni és fenntartani a cégről kialakult jó képet. Nem meglepő, hogyha egy cég egy ágazatban már befutott, hogy újabb vizekre evez. Ez történt az XyTech nevű céggel is, akik már sikeres befutottak a szoftverfejlesztés számos területén, de még a játékfejlesztésben nem tevékenykedtek. Sajnos arra, hogy kipróbálják magukat nincs szabad kapacitásuk ezért keresték fel kis fejlesztőcsapatunkat.A feladatunk egy bemutatkozó játékszoftver írása ezzel kutatva a piac reagálását a megrendelő cégnek.
+##II. Vágyálom rendszer leírása.
+A Megrendelő szeretné ha olyan játékszoftvert fejelsztenénk, amivel hatékonyan fel tudja mérni a jelenlegi piac reagálását egy új játékszoftver megjelenésére. Nem más mint, egy eléggé nagy népszerűségnek örvendő Unity-ben. Elképzelésük szerint kis gépigényű, így nagy réteg számára elérhető és élvezhető termékre vágyik. A játéknak életkori megkötöttsége nem lehet, vagyis olyan elemeket kell tartalmaznia ami minden korosztálynak megfelel.
+A megrendelés alapján rendelkezni kell online felülettel is. Ezen a felületen valósulna meg a fórum és egy interaktív kapcsolatot is kívánnak kialakítani a játékos közösséggel. A felhasználók ezen felül egy közösséget tudnak alkotni ezen keresztül.
+A projekt során nem szabad figyelmen kívül hagynunk az egyszerűséget és a könnyű kezelhetőséget sem. A Megrendelő nem kötötte ki, hogy 2 vagy 3 dimenzióba kerül megvalósításra, illetve szeretné ha nem csak Windows-os környzetben lenne elérhető.
+##III. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása.
+##IV. Jelenlegi üzleti folyamatok modellje.
+##V. Igényelt üzleti folyamatok modellje.
+##VI. Követelménylista.

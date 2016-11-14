@@ -1,9 +1,0 @@
--Követelmény specifikáció-
-
-részei:
-1. környezet ismertetése (egy élõ példa leírása)
-2.* cél, amit a megrendelõ elmondott.
-3. környezeti feltételek
-4. jelenlegi folyamatok
-5.* megvalósítandó folyamatok
-6.* követelmény lista
