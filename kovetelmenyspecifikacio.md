@@ -9,7 +9,7 @@ A projekt során nem szabad figyelmen kívül hagynunk az egyszerűséget és a 
 ##IV. Jelenlegi üzleti folyamatok modellje.
 ##V. Igényelt üzleti folyamatok modellje.
 ##VI. Követelménylista.
-ID | Név | Prioritás | Megjegyzés|
+ID | Név | Prioritás | Kifejtés|
 ---|-----|-----------|-----------|
 1 | Webes felület | 4 | a szofter integrálása jövőbeli webes flash alapú használatra |
 2 | Webes support | 3 | webes közössi központ létrehozása a melyen belül a fejlesztők és a felhasználók tarthatjak a kapcsolatot, valamint közösséget formálhatnak |
