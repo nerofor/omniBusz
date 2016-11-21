@@ -5,12 +5,15 @@ Jelenleg ma a szoftverpiacon nagyon nagy a verseny és nehéz olyan szoftvert í
 A Megrendelő szeretné ha olyan játékszoftvert fejelsztenénk, amivel hatékonyan fel tudja mérni a jelenlegi piac reagálását egy új játékszoftver megjelenésére. Nem más mint, egy eléggé nagy népszerűségnek örvendő Unity-ben. Elképzelésük szerint kis gépigényű, így nagy réteg számára elérhető és élvezhető termékre vágyik. A játéknak életkori megkötöttsége nem lehet, vagyis olyan elemeket kell tartalmaznia ami minden korosztálynak megfelel.
 A megrendelés alapján rendelkezni kell online felülettel is. Ezen a felületen valósulna meg a fórum és egy interaktív kapcsolatot is kívánnak kialakítani a játékos közösséggel. A felhasználók ezen felül egy közösséget tudnak alkotni ezen keresztül.
 A projekt során nem szabad figyelmen kívül hagynunk az egyszerűséget és a könnyű kezelhetőséget sem. A Megrendelő nem kötötte ki, hogy 2 vagy 3 dimenzióba kerül megvalósításra, illetve szeretné ha nem csak Windows-os környzetben lenne elérhető.
-##III. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása.
-##IV. Jelenlegi üzleti folyamatok modellje.
-##V. Igényelt üzleti folyamatok modellje.
+##III. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása
+A kismalacot eladtuk.
+##IV. Jelenlegi üzleti folyamatok modellje
+
+##V. Igényelt üzleti folyamatok modellje
+
 ##VI. Követelménylista
  
-ID | Név | Prioritás | Megjegyzés|
+ID | Név | Prioritás | Kifejtés|
 ---|-----|-----------|-----------|
 1 | Webes felület | 4 | a szofter integrálása jövőbeli webes flash alapú használatra |
 2 | Webes support | 3 | webes közössi központ létrehozása a melyen belül a fejlesztők és a felhasználók tarthatjak a kapcsolatot, valamint közösséget formálhatnak |
