@@ -6,7 +6,7 @@ A Megrendelő szeretné ha olyan játékszoftvert fejelsztenénk, amivel hatéko
 A megrendelés alapján rendelkezni kell online felülettel is. Ezen a felületen valósulna meg a fórum és egy interaktív kapcsolatot is kívánnak kialakítani a játékos közösséggel. A felhasználók ezen felül egy közösséget tudnak alkotni ezen keresztül.
 A projekt során nem szabad figyelmen kívül hagynunk az egyszerűséget és a könnyű kezelhetőséget sem. A Megrendelő nem kötötte ki, hogy 2 vagy 3 dimenzióba kerül megvalósításra, illetve szeretné ha nem csak Windows-os környzetben lenne elérhető.
 ##III. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása
-A kismalacot eladtuk.
+A kismalacot eladtuk. A csillámpóni jó.
 ##IV. Jelenlegi üzleti folyamatok modellje
 
 ##V. Igényelt üzleti folyamatok modellje
