@@ -11,6 +11,6 @@ public class Rotation : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //this.gameObject.transform.localEulerAngles = new Vector3(this.transform.rotation.x+10f, this.transform.rotation.y, this.transform.rotation.z);
-        this.gameObject.transform.Rotate(Vector3.up, 10f,Space.World);
-	}
+        this.gameObject.transform.Rotate(Vector3.up, 2f, Space.World);
+    }
 }

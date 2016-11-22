@@ -12,10 +12,13 @@ public class Kill : MonoBehaviour {
 	}
     void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.transform.position = new Vector3(SaveLoad.savedGame.positions[SaveLoad.savedGame.whichPosition].x,
+    SaveLoad.savedGame.positions[SaveLoad.savedGame.whichPosition].y,
+    SaveLoad.savedGame.positions[SaveLoad.savedGame.whichPosition].z);
+        }
 
-        other.gameObject.transform.position = new Vector3(SaveLoad.savedGame.positions[SaveLoad.savedGame.whichPosition].x,
-            SaveLoad.savedGame.positions[SaveLoad.savedGame.whichPosition].y,
-            SaveLoad.savedGame.positions[SaveLoad.savedGame.whichPosition].z);
 
     }
 }
