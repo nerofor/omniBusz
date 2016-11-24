@@ -2,17 +2,16 @@
 using System.Collections;
 
 public class Bullet : MonoBehaviour {
-
+    static public int damage = 35;
+    
 	// Use this for initialization
 	void Start () {
 	
 	}
-    void onCollisionEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag=="Enemy")
-        {
-            Destroy(other.gameObject);
-        }
+
+       
     }
    
 	// Update is called once per frame

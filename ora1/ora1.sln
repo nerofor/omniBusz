@@ -1,7 +1,7 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ora1", "ora1.csproj", "{9E067B4F-8C8B-0154-314F-068A156AD8E7}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{F967BA3C-BB58-AFC6-0026-C4A234A297F3}") = "ora1", "Assembly-CSharp.csproj", "{93F3F3AF-B4F7-5353-4944-170900BA9E5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9E067B4F-8C8B-0154-314F-068A156AD8E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E067B4F-8C8B-0154-314F-068A156AD8E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E067B4F-8C8B-0154-314F-068A156AD8E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E067B4F-8C8B-0154-314F-068A156AD8E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93F3F3AF-B4F7-5353-4944-170900BA9E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93F3F3AF-B4F7-5353-4944-170900BA9E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93F3F3AF-B4F7-5353-4944-170900BA9E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93F3F3AF-B4F7-5353-4944-170900BA9E5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

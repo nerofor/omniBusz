@@ -4,23 +4,23 @@ using System.Collections;
 public class Player : MonoBehaviour
 {
 
-    //ORAI
-    // Use this for initialization
     void Start()
     {
 
     }
 
-    /*void OnTriggerEnter(Collider other)
-    {
-        
-    }*/
+    bool selectedSniper=false;
+    bool selectedCanon = false;
     bool shieldActivated;
     bool runOnlyOnce = false;
     bool iCanUseSniper = false;
     bool iCanUseCanon = false;
+
+
     void OnTriggerEnter(Collider other)
     {
+
+
         if (other.gameObject.name == "Sniper")
         {
             iCanUseSniper = true;
@@ -50,33 +50,20 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag == "Shield")
         {
 
+
             if (!runOnlyOnce)
             {
                 GameObject bla = other.gameObject;
-                //itt csak elmentettem a colliderből kinyert változót egy gameobject változóba...
-                //ennek sok értelme nincs, csak le akartam tesztelni valamit
                 anotherShield = (GameObject)Instantiate(bla, new Vector3(this.gameObject.transform.position.x,
                     this.transform.position.y + 30f, this.transform.position.z), Quaternion.identity);
                 anotherShield.transform.parent = this.gameObject.transform;
-                //itt legeneráltam egy új objektumot, amit majd a függőleges pörgéshez akarok használni
-                //átállítom a szülőjét a játékosra, hogy ez az objektum (a felvett) végig kövesse a játékost
                 other.gameObject.transform.parent = this.gameObject.transform;
-                //ezután amiről a másolatot csinálom, annál is átállítom a szülőt, hogy ő is
-                //kövesse a játékost (ez az obj. fog vízszintesen pörögni
                 other.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x + 30f,
                     this.gameObject.transform.position.y,
                     this.gameObject.transform.position.z);
-                //az anohershieldet úgy hoztuk ltére, hogy függőlegesen már el legyen tolva
-                //ennek az eltolása itt következett be
                 shieldObject = other;
-                //kimentem a shieldobjectet is, hogy mind az anorhershieldet, mind a shieldobjectet
-                //kívülről tudjuk használni (másik metódusból)
                 shieldActivated = true;
                 runOnlyOnce = true;
-                //a runonlyonce-al azt a kivételt kezeljük le, hogy ha 
-                //megnőtt a golyó, újra érintkezhetne a körülötte forgó objektummal
-                //és ezt nem szeretnénk
-                //a shieldActivateddel pedig az Update-ből kezeljük az objektumokat
             }
 
 
@@ -96,9 +83,7 @@ public class Player : MonoBehaviour
         {
             shieldObject.gameObject.transform.RotateAround(this.gameObject.transform.position, Vector3.up, 10f);
             anotherShield.gameObject.transform.RotateAround(this.gameObject.transform.position, Vector3.right, 10f);
-            //ezekkel a sorokkal állítottam be azt, hogy mik körül forogjanak minden egyes képkockában (a felvétel után)
-            //az objektumok
-            //20 képkockánként állítok a pozíciójukon
+
             if (i > 20)
             {
                 shieldObject.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x + 30f,
@@ -120,35 +105,54 @@ public class Player : MonoBehaviour
         worldPoint = Camera.main.ScreenToWorldPoint(screenPoint);
         Vector3 direction = worldPoint - transform.position;
 
-        if (iCanUseSniper && ButtonManagement.slideScrollGameCanBeStarted)
+         if (Input.GetKeyDown(KeyCode.Alpha1)){
+            selectedCanon=false;
+            selectedSniper=true;
+            Debug.Log("Sniper Selected");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2)){
+		    selectedSniper=false;
+            selectedCanon=true;
+            Debug.Log("Canon Selected");
+	    }
+
+        if (selectedSniper==true)
         {
-
-
-            RaycastHit[] hits = Physics.RaycastAll(transform.position, direction);
-
-            Debug.DrawLine(transform.position, worldPoint, Color.green);
-
-            if (hits.Length > 0)
+            if (iCanUseSniper && ButtonManagement.slideScrollGameCanBeStarted)
             {
-                print("sugaram: " + hits[0].transform.gameObject.name);
 
-                if (Input.GetMouseButtonDown(0) && hits[0].transform.gameObject.name == "Dummy")
+
+                RaycastHit[] hits = Physics.RaycastAll(transform.position, direction);
+
+                Debug.DrawLine(transform.position, worldPoint, Color.green);
+
+                if (hits.Length > 0)
                 {
-                    Destroy(hits[0].transform.gameObject);
+                    print("sugaram: " + hits[0].transform.gameObject.name);
+
+                    if (Input.GetMouseButtonDown(0) && hits[0].transform.gameObject.name == "Dummy")
+                    {
+                        Destroy(hits[0].transform.gameObject);
+                    }
                 }
+
+
+
             }
-
-
-
         }
 
-        if (iCanUseCanon && ButtonManagement.slideScrollGameCanBeStarted && Input.GetMouseButtonDown(0))
+
+
+        if (selectedCanon==true)
+        {
+                    if (iCanUseCanon && ButtonManagement.slideScrollGameCanBeStarted && Input.GetMouseButtonDown(0))
         {
             Vector3 bulletpos = new Vector3(transform.position.x + (50f * Vector3.Normalize(worldPoint - transform.position).x),
                 transform.position.y + (50f * Vector3.Normalize(worldPoint - transform.position).y), transform.position.z);
             GameObject bullet = (GameObject)Instantiate(sphere, bulletpos, Quaternion.identity);
 
             bullet.GetComponent<Rigidbody>().AddForce((worldPoint - transform.position) * 10f, ForceMode.Impulse);
+        }
         }
 
 
@@ -162,9 +166,7 @@ public class Player : MonoBehaviour
         {
 
             float moveHorizontal = Input.GetAxis("Horizontal");
-            //ha a bal nyilat megnyomom, akkor -1-et tárolok el benne
-            //ha nem nyomok nyilat, akkor 0 van benne
-            //ha jobbra nyomom a nyilat, akkor 1-es kerül bele
+
 
             Vector3 movement = new Vector3(moveHorizontal, 0.0f, 0.0f);
             this.gameObject.GetComponent<Rigidbody>().AddForce(movement * speed);
