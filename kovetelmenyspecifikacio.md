@@ -17,12 +17,12 @@ A külső felhasználók csak a játék bemutatására szolgáló anyaghoz fogna
 ##VI. Követelménylista
 ID | Név | Prioritás | Kifejtés|
 ---|-----|-----------|-----------|
-1 | Webes felület | 4 | a szofter integrálása jövőbeli webes flash alapú használatra |
-2 | Webes support | 3 | webes közössi központ létrehozása a melyen belül a fejlesztők és a felhasználók tarthatjak a kapcsolatot, valamint közösséget formálhatnak |
+1 | Webes felület | 4 | a szoftver integrálása jövőbeli webes flash alapú használatra |
+2 | Webes support | 3 | webes közösségi központ létrehozása a melyen belül a fejlesztők és a felhasználók tarthatjak a kapcsolatot, valamint közösséget formálhatnak |
 3 | Score Board	| 2	| pontozási rendszer létrehozása |
 4 | Player Characters | 4 | több vállasztható karakter |
 5 |	Anim MBack | 3 | mozgó menü háttér |
 6 | Anim Back | 4 | mozgó ingame háttér |
-7 | Account	| 3 | account rendszer amely kezeli a mentéseket és egyéb személyhez kötött egységeket |
+7 | Account	| 3 | account rendszer, amely kezeli a mentéseket és egyéb személyhez kötött egységeket |
 8 | SpeedRun | 2 | a ScoreBoard kiegészítése egy időszámlálóval mely méri az adott szakasz teljesítésének idejét |
 9 | Difficulty | 2 | nehézségi szintek beállítása |
