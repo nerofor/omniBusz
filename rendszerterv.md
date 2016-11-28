@@ -2,7 +2,7 @@
 #II. Architektúra
 #III. Jogosultsági körök
 Alapvetően 2 féle környezet különböztetünk meg a projekt során: 
-1 webes
+* webes
 	* regisztrálatlan felhasználó
 		- letöltheti a játékot
 		- kép vagy videógalériát nézhet
@@ -18,7 +18,7 @@ Alapvetően 2 féle környezet különböztetünk meg a projekt során:
 	* adminisztrátor
 		- regisztrálhat, törölhet(logikai), figyelmeztethet felhasználót
 		- törölhet vitatémát
-2 játék
+* játék
 	* játékos
 		- bejelentkezhet
 		- pontot szerezhet
