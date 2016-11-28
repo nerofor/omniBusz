@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Player : MonoBehaviour
@@ -6,28 +7,45 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-
+        score = 0;
     }
 
+    public Text scoreText;
+
+    static public int score;
     bool selectedSniper=false;
     bool selectedCanon = false;
     bool shieldActivated;
     bool runOnlyOnce = false;
     bool iCanUseSniper = false;
     bool iCanUseCanon = false;
+    bool canShoot = true;
+    static public int time;
 
+    static public bool ShootLimit()
+    {
+        time = time + 1;
+        if (time >= 60)
+        {
+            time = 0;
+            return true;
+        }
+        else return false;
+
+
+    }
 
     void OnTriggerEnter(Collider other)
     {
 
 
-        if (other.gameObject.name == "Sniper")
+        if (other.gameObject.tag == "Sniper")
         {
             iCanUseSniper = true;
             Destroy(other.gameObject);
         }
 
-        if (other.gameObject.name == "Canon")
+        if (other.gameObject.tag == "Canon")
         {
             iCanUseCanon = true;
             Destroy(other.gameObject);
@@ -39,11 +57,13 @@ public class Player : MonoBehaviour
             youCanJump = true;
         }
 
-        if (other.gameObject.name == "Collectible")
+        if (other.gameObject.tag == "Collectible")
         {
-            this.gameObject.transform.localScale = new Vector3(this.gameObject.transform.localScale.x + 10f, this.gameObject.transform.localScale.y + 10f
+            /*this.gameObject.transform.localScale = new Vector3(this.gameObject.transform.localScale.x + 10f, this.gameObject.transform.localScale.y + 10f
                 , this.gameObject.transform.localScale.z + 10f);
-            this.gameObject.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 10f, this.transform.position.z);
+            this.gameObject.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 10f, this.transform.position.z);*/
+            score = score + 1;
+
             other.gameObject.SetActive(false);
         }
 
@@ -79,6 +99,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        scoreText.text = "Score: " + score;
+
+
+
         if (shieldActivated)
         {
             shieldObject.gameObject.transform.RotateAround(this.gameObject.transform.position, Vector3.up, 10f);
@@ -147,11 +171,13 @@ public class Player : MonoBehaviour
         {
                     if (iCanUseCanon && ButtonManagement.slideScrollGameCanBeStarted && Input.GetMouseButtonDown(0))
         {
+
             Vector3 bulletpos = new Vector3(transform.position.x + (50f * Vector3.Normalize(worldPoint - transform.position).x),
                 transform.position.y + (50f * Vector3.Normalize(worldPoint - transform.position).y), transform.position.z);
             GameObject bullet = (GameObject)Instantiate(sphere, bulletpos, Quaternion.identity);
 
             bullet.GetComponent<Rigidbody>().AddForce((worldPoint - transform.position) * 10f, ForceMode.Impulse);
+                ShootLimit();
         }
         }
 

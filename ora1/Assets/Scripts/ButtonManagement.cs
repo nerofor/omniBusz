@@ -10,7 +10,7 @@ public class ButtonManagement : MonoBehaviour {
 	public GameObject quitButton;
 	bool newGameCanBeStarted;   
     public GameObject loadingButton;
-    public GameObject settingsButton;
+    //public GameObject settingsButton;
 
     public GameObject player;
 
@@ -84,7 +84,7 @@ public class ButtonManagement : MonoBehaviour {
         quitButton.SetActive(false);
 
         loadingButton.SetActive(false);
-        settingsButton.SetActive(false);
+        //settingsButton.SetActive(false);
 
     }
     public static bool slideScrollGameCanBeStarted;
@@ -98,7 +98,7 @@ public class ButtonManagement : MonoBehaviour {
         quitButton.SetActive(false);
 
         loadingButton.SetActive(false);
-        settingsButton.SetActive(false);
+        //settingsButton.SetActive(false);
         newGame2Button.SetActive(false);
 
 

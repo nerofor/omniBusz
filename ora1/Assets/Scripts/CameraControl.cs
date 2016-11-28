@@ -31,7 +31,7 @@ public class CameraControl : MonoBehaviour {
 
             //transform.position = player.transform.position + offset;
             transform.position = new Vector3(player.transform.position.x, player.transform.position.y,
-                player.transform.position.z - 100f);
+                player.transform.position.z - 200f);
         }
 	}
 }

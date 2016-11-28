@@ -10,7 +10,10 @@ public class Bullet : MonoBehaviour {
 	}
     void OnTriggerEnter(Collider other)
     {
-
+        if (other.gameObject.tag == "StageELement")
+        {
+            Destroy(this.gameObject);
+        }
        
     }
    
