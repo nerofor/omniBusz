@@ -1,6 +1,7 @@
 #I. Bevezetés
 #II. Architektúra
 #III. Jogosultsági körök
+	
 Alapvetően 2 féle környezet különböztetünk meg a projekt során: 
 * webes
 	* regisztrálatlan felhasználó
