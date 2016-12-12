@@ -7,22 +7,23 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        score = 0;
+        winText.enabled = false;
     }
 
     public Text scoreText;
+    public Text winText;
 
-    static public int score;
+    static public int score = 0;
     bool selectedSniper=false;
     bool selectedCanon = false;
     bool shieldActivated;
     bool runOnlyOnce = false;
     bool iCanUseSniper = false;
     bool iCanUseCanon = false;
-    bool canShoot = true;
+    //bool canShoot = true;
     static public int time;
 
-    static public bool ShootLimit()
+    /*static public bool ShootLimit()
     {
         time = time + 1;
         if (time >= 60)
@@ -33,19 +34,24 @@ public class Player : MonoBehaviour
         else return false;
 
 
-    }
+    }*/
 
     void OnTriggerEnter(Collider other)
     {
 
 
-        if (other.gameObject.tag == "Sniper")
+        if (other.gameObject.name == "Sniper")
         {
             iCanUseSniper = true;
             Destroy(other.gameObject);
         }
 
-        if (other.gameObject.tag == "Canon")
+        if (other.gameObject.tag == "WinBox")
+        {
+            winText.enabled = true;
+        }
+
+        if (other.gameObject.name == "Canon")
         {
             iCanUseCanon = true;
             Destroy(other.gameObject);
@@ -55,6 +61,11 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag == "StageElement")
         {
             youCanJump = true;
+        }
+
+        if (other.gameObject.tag == "trap")
+        {
+            Destroy(other.gameObject);
         }
 
         if (other.gameObject.tag == "Collectible")
@@ -100,7 +111,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         scoreText.text = "Score: " + score;
-
+        
 
 
         if (shieldActivated)
@@ -129,7 +140,7 @@ public class Player : MonoBehaviour
         worldPoint = Camera.main.ScreenToWorldPoint(screenPoint);
         Vector3 direction = worldPoint - transform.position;
 
-         if (Input.GetKeyDown(KeyCode.Alpha1)){
+        if (Input.GetKeyDown(KeyCode.Alpha1)){
             selectedCanon=false;
             selectedSniper=true;
             Debug.Log("Sniper Selected");
@@ -139,6 +150,7 @@ public class Player : MonoBehaviour
             selectedCanon=true;
             Debug.Log("Canon Selected");
 	    }
+
 
         if (selectedSniper==true)
         {
@@ -167,18 +179,17 @@ public class Player : MonoBehaviour
 
 
 
-        if (selectedCanon==true)
-        {
-                    if (iCanUseCanon && ButtonManagement.slideScrollGameCanBeStarted && Input.GetMouseButtonDown(0))
-        {
 
-            Vector3 bulletpos = new Vector3(transform.position.x + (50f * Vector3.Normalize(worldPoint - transform.position).x),
-                transform.position.y + (50f * Vector3.Normalize(worldPoint - transform.position).y), transform.position.z);
-            GameObject bullet = (GameObject)Instantiate(sphere, bulletpos, Quaternion.identity);
+        if (selectedCanon == true)
+        {
+            if (iCanUseCanon && ButtonManagement.slideScrollGameCanBeStarted && Input.GetMouseButtonDown(0))
+            {
+                Vector3 bulletpos = new Vector3(transform.position.x + (50f * Vector3.Normalize(worldPoint - transform.position).x),
+                    transform.position.y + (50f * Vector3.Normalize(worldPoint - transform.position).y), transform.position.z);
+                GameObject bullet = (GameObject)Instantiate(sphere, bulletpos, Quaternion.identity);
 
-            bullet.GetComponent<Rigidbody>().AddForce((worldPoint - transform.position) * 10f, ForceMode.Impulse);
-                ShootLimit();
-        }
+                bullet.GetComponent<Rigidbody>().AddForce((worldPoint - transform.position) * 10f, ForceMode.Impulse);
+            }
         }
 
 
