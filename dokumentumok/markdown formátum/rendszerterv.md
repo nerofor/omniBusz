@@ -24,6 +24,7 @@ Alapvetően 2 féle környezet különböztetünk meg a projekt során:
 		- bejelentkezhet
 		- pontot szerezhet
 		- meghalhat
+
 #IV. Képernyőtervek
 #V. Funkciók
 #VI. Adatmodell - ábra
